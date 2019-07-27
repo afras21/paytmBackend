@@ -16,13 +16,15 @@ module.exports = {
                 paramArray[name] = paramlist[name];
             }
         }
-        // paramArray["CALLBACK_URL"] = "http://localhost:3001/api/paytm/request";
-        paramArray["CALLBACK_URL"] ="https://paytmbackendghee.herokuapp.com/api/paytm/request/">
+        paramArray["CALLBACK_URL"] = "http://google.com";
+        //    paramArray["CALLBACK_URL"] = "https://google.com"
+        // paramArray["CALLBACK_URL"] ="https://paytmbackendghee.herokuapp.com/api/paytm/request/">
 
         checksum.genchecksum(paramArray, PAYTM_MERCHANT_KEY, (err, result) => {
             if(err) throw err;
             console.log(err)
             console.log('resut------------\n',result)
+
             var paytmParams = {
                 "MID" : result.MID,        
                 "WEBSITE" : result.WEBSITE,        

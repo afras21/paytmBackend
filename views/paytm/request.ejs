@@ -10,10 +10,22 @@
     <form name="f1" id="myForm" method="post" action="https://securegw-stage.paytm.in/order/process">
         <% for (name in result) {
         %>
-        <input type="text" name='<%= name %>" value="<%= result[name] %>'/>
+        <input type="text" name='<%= name %>" value="<%= result.name %>'/>
         <%}%>
 
     </form>
+    <!-- <form id="f1" name="f1" method="post" action="https://securegw-stage.paytm.in/order/process">
+        <input type="hidden" id="ORDER_ID" name="ORDER_ID" value='<%= result.ORDER_ID %>'/>
+        <input type="hidden" id="CUST_ID" name="CUST_ID" value='<%= result.CUST_ID %>'/>
+        <input type="hidden" id="INDUSTRY_TYPE_ID"name="INDUSTRY_TYPE_ID"value='<%= result.INDUSTRY_TYPE_ID %>'>
+        <input type="hidden" id="CHANNEL_ID" name="CHANNEL_ID" value='<%= result.CHANNEL_ID %>'>
+        <input type="hidden" id="TXN_AMOUNT" name="TXN_AMOUNT" value='<%= result.TXN_AMOUNT %>'>
+        <input type="hidden" title="MID" name="MID" value='<%= result.MID %>'>
+        <input type="hidden" name="WEBSITE" value='<%= result.WEBSITE %>'>
+        <input type="hidden" name="PAYTM_MERCHANT_KEY" value='<%= result.PAYTM_MERCHANT_KEY %>'>
+        <input type="hidden" name="CHECKSUMHASH" value='<%= result.CHECKSUMHASH %>'>
+        <input type="hidden" name="CALLBACK_URL" value='<%= result.CALLBACK_URL %>'>
+        </!--> -->
 
         <script> 
             document.f1.submit();
