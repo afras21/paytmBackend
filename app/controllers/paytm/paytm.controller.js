@@ -16,7 +16,7 @@ module.exports = {
                 paramArray[name] = paramlist[name];
             }
         }
-        paramArray["CALLBACK_URL"] = "http://google.com";
+        paramArray["CALLBACK_URL"] = "http://localhost:3001/api/paytm/response/";
         //    paramArray["CALLBACK_URL"] = "https://google.com"
         // paramArray["CALLBACK_URL"] ="https://paytmbackendghee.herokuapp.com/api/paytm/request/">
 
@@ -63,7 +63,7 @@ module.exports = {
     },
     response: (req, res) => {
         console.log(req.body);
-        if(req.body.RESP === '01') {
+        if(req.body.RESPCODE === '01') {
             res.render("paytm/response", {
                 status: true,
                 result: req.body

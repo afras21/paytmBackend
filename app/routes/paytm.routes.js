@@ -3,6 +3,6 @@ const paytm = require("../controllers/paytm/paytm.controller");
 
 router.get("/request", paytm.getRequest);
 router.post("/request", paytm.request);
-router.post("/resposne", paytm.response);
+router.post("/response", paytm.response);
 
 module.exports = router;
